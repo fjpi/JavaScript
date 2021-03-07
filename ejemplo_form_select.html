@@ -1,0 +1,37 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+        <meta  http-equiv="content-type"  content="text/html;charset=utf-8">
+        <title>DWEC05 - Trabajando con un objeto Select</title>
+        <script  type="text/javascript">
+            const consultar = () => {
+                let provincias = document.getElementById("provincias");
+                let texto = provincias.options[provincias.selectedIndex].text;
+                let valor = provincias.options[provincias.selectedIndex].value;
+                alert(`Datos de la opción seleccionada:\n\nTexto: ${texto}\nValor: ${valor}`);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Trabajando con un objeto Select</h1>
+        <form id="formulario">
+            <p>
+                <label for="provincias">Seleccione provincia: </label>
+                <select name="provincias" id="provincias">
+                    <option value="AL">Almería</option>
+                    <option value="JA">Jaen</option>
+                    <option value="GR">Granada</option>
+                    <option value="MA">Málaga</option>
+                    <option value="SE">Sevilla</option>
+                    <option value="CO">Córdoba</option>
+                    <option value="CA">Cádiz</option>
+                    <option value="HU">Huelva</option>
+                </select>
+            </p>
+            <p>
+                Selecciona una opción y pulsa el botón.
+            </p>
+            <input type="button" name="boton" value="Consultar información de la opción" onclick="consultar()"/>
+        </form>
+    </body>
+</html>

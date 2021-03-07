@@ -1,0 +1,28 @@
+<!DOCTYPE  html>
+<html>
+    <head>
+        <meta  http-equiv="content-type"  content="text/html;charset=utf-8">
+        <title>Ejemplo de RegExp</title>
+        <script type="text/javascript">
+            const iniciar = () => {     
+                document.getElementById("comprobar").onclick = comprobarDni;
+            }
+            const comprobarDni = () => {  
+                let dni = document.getElementById("dni").value;
+                let patron = /^\d{8}[A-Z]$/;
+                if (dni.match(patron))
+                    alert('DNI Correcto!!!!');
+                else
+                    alert('DNI INCORRECTO!!!!');
+            }
+            window.onload = iniciar;
+        </script>
+    </head>
+    <body>
+        <form name="formulario">
+            <label for="dni">DNI:</label>
+            <input type="text" name="dni" id="dni" />
+            <input type="button" name="comprobar" id="comprobar" value="Comprobar Formato" />
+        </form>
+    </body>
+</html>
